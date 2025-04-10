@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation - KSRM Maps</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="nav-container">
+        <header>
+            <a href="index.html" class="logo">KSRM Maps</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="navigation.html"><i class="fas fa-map"></i> Navigation</a></li>
+                    <li><a href="hod.html"><i class="fas fa-user-tie"></i> HOD</a></li>
+                    <li><a href="events.html"><i class="fas fa-calendar"></i> Upcoming Events</a></li>
+                    <li><a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a></li>
+                    <li><a href="courses.html"><i class="fas fa-book"></i> Course Recommendations</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <main>
+        <section class="navigation-content">
+            <h2>Campus Navigation</h2>
+            <div class="navigation-container">
+                <!-- Route Navigation with From/To Dropdowns -->
+                <div class="route-navigation">
+                    <div class="select-group">
+                        <label for="from">From:</label>
+                        <select id="from">
+                            <option value="" disabled selected>Select Location</option>
+                            <option value="14.479489,78.765701">Main Gate</option>
+                            <option value="14.479265668949829,78.76538050123307">KSNR Ghat</option>
+                            <option value="14.478037919994538,78.76579504777187">Main Block</option>
+                            <option value="14.477992617205492,78.76673171459615">Basket Ball Court</option>
+                            <option value="14.477591375383968,78.7666136973986">PG Block</option>
+                            <option value="14.47694122543524,78.76592536088782">Mechanical Workshop</option>
+                            <option value="14.478944522661594,78.76670573764665">KSRM Cricket Ground 1</option>
+                            <option value="14.47945360444077,78.76592229043584">Solar Bike Parking</option>
+                            <option value="14.477249953208018,78.7653713257546">Auditorium</option>
+                            <option value="14.476840695787327,78.76519355572036">EEE & ECE Dept</option>
+                            <option value="14.477452020611144,78.76539787805935">Library</option>
+                            <option value="14.477451037289244,78.76455104271645">Canteen</option>
+                            <option value="14.476329137180583,78.76296426677092">Cricket Ground 2</option>
+                            <option value="14.476935619143577,78.76632892306003">Mechanical Block</option>
+                            <option value="14.478711,78.765019">CSE & AIML Block</option>
+                            <option value="14.477237008355349,78.76511181165445">Civil Block</option>
+                            <option value="14.477416,78.764096">Civil Ganesh Hostel</option>
+                            <option value="14.475354,78.764381">Kandula Hostel</option>
+                            <option value="14.478292,78.765610">Car Parking</option>
+                        </select>
+                    </div>
+                    <div class="select-group">
+                        <label for="to">Destination:</label>
+                        <select id="to">
+                            <option value="" disabled selected>Select Destination</option>
+                            <option value="14.479489,78.765701">Main Gate</option>
+                            <option value="14.479265668949829,78.76538050123307">KSNR Ghat</option>
+                            <option value="14.478037919994538,78.76579504777187">Main Block</option>
+                            <option value="14.477992617205492,78.76673171459615">Basket Ball Court</option>
+                            <option value="14.477591375383968,78.7666136973986">PG Block</option>
+                            <option value="14.47694122543524,78.76592536088782">Mechanical Workshop</option>
+                            <option value="14.478944522661594,78.76670573764665">KSRM Cricket Ground 1</option>
+                            <option value="14.47945360444077,78.76592229043584">Solar Bike Parking</option>
+                            <option value="14.477249953208018,78.7653713257546">Auditorium</option>
+                            <option value="14.476840695787327,78.76519355572036">EEE & ECE Dept</option>
+                            <option value="14.477452020611144,78.76539787805935">Library</option>
+                            <option value="14.477451037289244,78.76455104271645">Canteen</option>
+                            <option value="14.476329137180583,78.76296426677092">Cricket Ground 2</option>
+                            <option value="14.476935619143577,78.76632892306003">Mechanical Block</option>
+                            <option value="14.478711,78.765019">CSE & AIML Block</option>
+                            <option value="14.477237008355349,78.76511181165445">Civil Block</option>
+                            <option value="14.477416,78.764096"> Ganesh Hostel</option>
+                            <option value="14.475354,78.764381">Kandula Hostel</option>
+                            <option value="14.478292,78.765610">Car Parking</option>
+                        </select>
+                    </div>
+                    <button onclick="showRoute()">
+                        <i class="fas fa-route"></i> Show Route
+                    </button>
+                </div>
+
+                <!-- Building Exploration -->
+                <div class="building-navigation">
+                    <h3>Explore Buildings</h3>
+                    <div class="select-group">
+                        <label for="building">Select Building:</label>
+                        <select id="building" name="building">
+                            <option value="" disabled selected>Select a building</option>
+                            <option value="sj-block">SJ Block</option>
+                            <option value="main-block">Main Block</option>
+                            <option value="e-block">E Block</option>
+                            <option value="cse-aiml-block">CSE & AIML Block</option>
+                            <option value="mechanical-block">Mechanical Block</option>
+                            <option value="eee-ece-block">EEE & ECE Block</option>
+                            <option value="civil-block">Civil Block</option>
+                            <option value="library-block">Library Block</option>
+                            <option value="pg-block">PG Block</option>
+                        </select>
+                    </div>
+                    <button onclick="showAllFloors()">Show Floors & Rooms</button>
+                    <div id="building-result"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Show Route function using Google Maps API
+        function showRoute() {
+            let from = document.getElementById("from").value;
+            let to = document.getElementById("to").value;
+
+            if (!from || !to) {
+                alert("Please select both From and Destination locations.");
+                return;
+            }
+
+            const googleMapsURL = `https://www.google.com/maps/dir/?api=1&origin=${from}&destination=${to}&travelmode=walking`;
+            console.log(`Opening Google Maps URL: ${googleMapsURL}`);
+            const newWindow = window.open(googleMapsURL, "_blank");
+            if (!newWindow) {
+                alert("Unable to open Google Maps. Please allow pop-ups for this site.");
+            }
+        }
+
+        // Page load initialization
+        document.addEventListener('DOMContentLoaded', () => {
+            const select = document.getElementById('to');
+            select.style.opacity = '0';
+            setTimeout(() => {
+                select.style.transition = 'opacity 0.5s ease';
+                select.style.opacity = '1';
+            }, 100);
+        });
+
+        // Building/Floor/Room Logic
+        function showAllFloors() {
+            const building = document.getElementById("building").value;
+            const resultDiv = document.getElementById("building-result");
+            resultDiv.innerHTML = "";
+
+            const buildingData = {
+                "sj-block": {
+                    "Ground Floor": [
+                        { roomNo: "SJ-01", classroom: "1st CSE Lab" },
+                        { roomNo: "SJ-02", classroom: "1st ECE Lab" },
+                        { roomNo: "SJ-03", classroom: "Staff Room" },
+                        { roomNo: "SJ-04", classroom: "Computer Center" }
+                    ],
+                    "First Floor": [
+                        { roomNo: "SJ-11", classroom: "1st CSE A" },
+                        { roomNo: "SJ-12", classroom: "1st ECE B" },
+                        { roomNo: "SJ-13", classroom: "1st MECH A" },
+                        { roomNo: "SJ-14", classroom: "Tutorial Room" }
+                    ],
+                    "Second Floor": [
+                        { roomNo: "SJ-21", classroom: "2nd CSE A" },
+                        { roomNo: "SJ-22", classroom: "2nd ECE B" },
+                        { roomNo: "SJ-23", classroom: "2nd IT A" }
+                    ],
+                    "Third Floor": [
+                        { roomNo: "SJ-31", classroom: "3rd CSE A" },
+                        { roomNo: "SJ-32", classroom: "3rd ECE Seminar" },
+                        { roomNo: "SJ-33", classroom: "Library" }
+                    ]
+                },
+                "main-block": {
+                    "Ground Floor": [
+                        { roomNo: "101", classroom: "Office Room" },
+                        { roomNo: "101A", classroom: "Office Room" },
+                        { roomNo: "102", classroom: "Accounts Section" },
+                        { roomNo: "103", classroom: "Ladies Toilet" },
+                        { roomNo: "104", classroom: "Physical Director" },
+                        { roomNo: "105", classroom: "Admission Cell" },
+                        { roomNo: "106", classroom: "Ladies Waiting Room" },
+                        { roomNo: "107", classroom: "Skill Development Center" },
+                        { roomNo: "108", classroom: "Toilet" },
+                        { roomNo: "109", classroom: "Store Room" },
+                        { roomNo: "110", classroom: "Data Mining Lab" },
+                        { roomNo: "111", classroom: "Examination Section Confidential Room" },
+                        { roomNo: "111A", classroom: "Store Room" },
+                        { roomNo: "112", classroom: "Store Room" },
+                        { roomNo: "113", classroom: "Exam Section" },
+                        { roomNo: "113A", classroom: "Store" },
+                        { roomNo: "113B", classroom: "Confidential Room Exam Section" }
+                    ],
+                    "First Floor": [
+                        { roomNo: "201", classroom: "MD Chamber" },
+                        { roomNo: "202", classroom: "Principal Office" },
+                        { roomNo: "203", classroom: "Ante Room" },
+                        { roomNo: "204", classroom: "AO Office" },
+                        { roomNo: "205", classroom: "Conference Hall" },
+                        { roomNo: "205A", classroom: "Toilet" },
+                        { roomNo: "206", classroom: "Dinning Hall" },
+                        { roomNo: "206A", classroom: "Toilet" },
+                        { roomNo: "207", classroom: "Faculty" },
+                        { roomNo: "208", classroom: "Toilet" },
+                        { roomNo: "209", classroom: "Faculty" },
+                        { roomNo: "210", classroom: "IQAC Office" },
+                        { roomNo: "211A", classroom: "Server Room" },
+                        { roomNo: "212A", classroom: "Server Room" },
+                        { roomNo: "212C", classroom: "Computer Center" },
+                        { roomNo: "MEDIA CENTER", classroom: "Media Center" },
+                        { roomNo: "BERNERS-LEE WEB LAB", classroom: "Berners-Lee Web Lab" },
+                        { roomNo: "TORVALDS INNOVATION LAB", classroom: "Torvalds Innovation Lab" },
+                        { roomNo: "ALUMNI CELL", classroom: "Alumni Cell" }
+                    ],
+                    "Second Floor": [
+                        { roomNo: "301", classroom: "Seminar Hall" },
+                        { roomNo: "302", classroom: "Class Room" },
+                        { roomNo: "303", classroom: "Class Room" },
+                        { roomNo: "304", classroom: "Student Activity Council" },
+                        { roomNo: "305", classroom: "Faculty" },
+                        { roomNo: "306", classroom: "Faculty" },
+                        { roomNo: "307", classroom: "Toilet" },
+                        { roomNo: "308", classroom: "Website Committee" },
+                        { roomNo: "309", classroom: "Store Room" },
+                        { roomNo: "310A", classroom: "DEAN, Faculty Affairs" },
+                        { roomNo: "310A", classroom: "Drawing Hall" },
+                        { roomNo: "310B", classroom: "Drawing Hall" },
+                        { roomNo: "310C", classroom: "Drawing Hall" },
+                        { roomNo: "311", classroom: "Anti-Ragging, Mentoring Cell, Grievance Redressal Cell" },
+                        { roomNo: "312", classroom: "Lecture Capturing System" },
+                        { roomNo: "313", classroom: "Classroom" }
+                    ]
+                },
+                "e-block": {
+                    "Ground Floor": [
+                        { roomNo: "E-01", classroom: "Workshop" },
+                        { roomNo: "E-02", classroom: "1st Mech Lab" },
+                        { roomNo: "E-03", classroom: "Canteen" },
+                        { roomNo: "E-04", classroom: "Store Room" }
+                    ],
+                    "First Floor": [
+                        { roomNo: "E-11", classroom: "3rd CSE A" },
+                        { roomNo: "E-12", classroom: "3rd ECE B" },
+                        { roomNo: "E-13", classroom: "Project Lab" }
+                    ],
+                    "Second Floor": [
+                        { roomNo: "E-21", classroom: "2nd CSE Lab" },
+                        { roomNo: "E-22", classroom: "2nd ECE Seminar" },
+                        { roomNo: "E-23", classroom: "2nd IT A" }
+                    ],
+                    "Third Floor": [
+                        { roomNo: "E-31", classroom: "4th CSE A" },
+                        { roomNo: "E-32", classroom: "4th ECE B" },
+                        { roomNo: "E-33", classroom: "Research Lab" }
+                    ]
+                },
+                "cse-aiml-block": {
+                    "Ground Floor": [
+                        { roomNo: "101", classroom: "Vice Chairmen" },
+                        { roomNo: "102", classroom: "T&P Cell Office" },
+                        { roomNo: "103", classroom: "Administrative Manager" },
+                        { roomNo: "104", classroom: "Toilet" },
+                        { roomNo: "105", classroom: "T&P Cell" },
+                        { roomNo: "106", classroom: "Seminar Hall" }
+                    ],
+                    "First Floor": [
+                        { roomNo: "201", classroom: "3rd year-AIML" },
+                        { roomNo: "202", classroom: "Ladies Toilet" },
+                        { roomNo: "203", classroom: "3rd year CSE B/s" },
+                        { roomNo: "204", classroom: "Ladies Toilet" },
+                        { roomNo: "205", classroom: "3rd year-CSE C/s" },
+                        { roomNo: "206", classroom: "Staff Room" },
+                        { roomNo: "207", classroom: "Machine Learning Lab" },
+                        { roomNo: "208", classroom: "Python Programming Lab" },
+                        { roomNo: "209", classroom: "Classroom" },
+                        { roomNo: "210", classroom: "Classroom" },
+                        { roomNo: "211", classroom: "Tutorial" },
+                        { roomNo: "212", classroom: "Tutorial" }
+                    ],
+                    "Second Floor": [
+                        { roomNo: "301", classroom: "CSE HOD" },
+                        { roomNo: "302", classroom: "Classroom" },
+                        { roomNo: "303", classroom: "2nd year-AIML" },
+                        { roomNo: "304", classroom: "Gents Toilet" },
+                        { roomNo: "305", classroom: "4th year-CSE C/s" },
+                        { roomNo: "306", classroom: "2nd year-CSE C/s" },
+                        { roomNo: "307", classroom: "Staff Room" },
+                        { roomNo: "308", classroom: "Classroom" },
+                        { roomNo: "309", classroom: "Staff Room" },
+                        { roomNo: "310", classroom: "3rd year-CSE A/s" },
+                        { roomNo: "311", classroom: "Staff Room" },
+                        { roomNo: "312", classroom: "Staff Room" }
+                    ],
+                    "Third Floor": [
+                        { roomNo: "401", classroom: "4th year-AIML" },
+                        { roomNo: "402", classroom: "Ladies Toilet" },
+                        { roomNo: "403", classroom: "2nd year-CSE A/s" },
+                        { roomNo: "404", classroom: "Faculty" },
+                        { roomNo: "405", classroom: "Toilet" },
+                        { roomNo: "406", classroom: "4th year-CSE A/s" },
+                        { roomNo: "407", classroom: "4th year-CSE B/s" },
+                        { roomNo: "408", classroom: "Faculty" },
+                        { roomNo: "409", classroom: "CSI Local Chapter" },
+                        { roomNo: "410", classroom: "Classroom" },
+                        { roomNo: "411", classroom: "2nd year-CSE B/s" },
+                        { roomNo: "412", classroom: "Staff Room" },
+                        { roomNo: "413", classroom: "Staff Room" }
+                    ]
+                },
+                "mechanical-block": {
+                    "Ground Floor": [
+                        { roomNo: "101", classroom: "Classroom" },
+                        { roomNo: "102", classroom: "Classroom" },
+                        { roomNo: "103", classroom: "Seminar Hall" },
+                        { roomNo: "104", classroom: "Faculty" },
+                        { roomNo: "105", classroom: "CAD Lab" },
+                        { roomNo: "105A", classroom: "Instrumentation Lab" },
+                        { roomNo: "106", classroom: "Heat Transfer Lab" },
+                        { roomNo: "107", classroom: "Thermal Engineering Lab" },
+                        { roomNo: "108", classroom: "CAM Lab" },
+                        { roomNo: "109", classroom: "M.Tech 1st sem" },
+                        { roomNo: "110", classroom: "Faculty" },
+                        { roomNo: "111", classroom: "Toilet" },
+                        { roomNo: "112", classroom: "Faculty" },
+                        { roomNo: "113", classroom: "Faculty" },
+                        { roomNo: "114", classroom: "Office" },
+                        { roomNo: "115", classroom: "Faculty" },
+                        { roomNo: "116", classroom: "Post Office" },
+                        { roomNo: "117", classroom: "Office" },
+                        { roomNo: "118", classroom: "Mechanical HOD" },
+                        { roomNo: "119", classroom: "R&D" },
+                        { roomNo: "120", classroom: "Workshop" },
+                        { roomNo: "122", classroom: "Mechatronics Lab" },
+                        { roomNo: "123", classroom: "Material Science Lab" },
+                        { roomNo: "123A", classroom: "Store Room" },
+                        { roomNo: "123B", classroom: "Production Engg Lab" },
+                        { roomNo: "124", classroom: "Toilet" },
+                        { roomNo: "125", classroom: "Foundry & Black Smithy" },
+                        { roomNo: "126", classroom: "Project Lab" }
+                    ],
+                    "First Floor": [
+                        { roomNo: "201", classroom: "3rd year-Mech A/s" },
+                        { roomNo: "202", classroom: "3rd year-Mech B/s" },
+                        { roomNo: "203", classroom: "Classroom" },
+                        { roomNo: "204", classroom: "Ladies Waiting Hall/Toilet" },
+                        { roomNo: "205", classroom: "Mech Dept. Library" },
+                        { roomNo: "206", classroom: "Engineering Graphics Lab" },
+                        { roomNo: "207", classroom: "2nd year-Mech A/s" },
+                        { roomNo: "208", classroom: "2nd year-Mech B/s" },
+                        { roomNo: "209", classroom: "Faculty" },
+                        { roomNo: "210", classroom: "Toilet" },
+                        { roomNo: "211", classroom: "Faculty" },
+                        { roomNo: "212", classroom: "Faculty" },
+                        { roomNo: "213", classroom: "Faculty" },
+                        { roomNo: "214", classroom: "Mech Dept Library" },
+                        { roomNo: "215", classroom: "Metrology Lab" },
+                        { roomNo: "215A", classroom: "Engineering Mechanics Lab" },
+                        { roomNo: "216", classroom: "Faculty" }
+                    ]
+                },
+                "eee-ece-block": {
+                    "Ground Floor": [
+                        { roomNo: "102", classroom: "Office" },
+                        { roomNo: "103", classroom: "HoD, EEE" },
+                        { roomNo: "104", classroom: "Faculty" },
+                        { roomNo: "105", classroom: "4th year EEE" },
+                        { roomNo: "106", classroom: "3rd year EEE" },
+                        { roomNo: "107", classroom: "2nd year EEE" },
+                        { roomNo: "108", classroom: "4th year - ECE B/s" },
+                        { roomNo: "109", classroom: "Toilet" },
+                        { roomNo: "110", classroom: "Power Room" },
+                        { roomNo: "111", classroom: "Seminar Hall" },
+                        { roomNo: "112", classroom: "Electrical Machines Lab-II" },
+                        { roomNo: "112A", classroom: "Electrical Machines Lab-II" },
+                        { roomNo: "113", classroom: "Electrical Machines Lab" },
+                        { roomNo: "114", classroom: "Computer Lab EEE" },
+                        { roomNo: "115", classroom: "BEE Lab" },
+                        { roomNo: "115A", classroom: "Power Systems Lab" }
+                    ],
+                    "First Floor": [
+                        { roomNo: "203 & 203A", classroom: "HOD, ECE" },
+                        { roomNo: "204", classroom: "Faculty" },
+                        { roomNo: "205", classroom: "Ladies Waiting Room" },
+                        { roomNo: "206", classroom: "2nd year ECE - A/s" },
+                        { roomNo: "207", classroom: "2nd year ECE - B/s" },
+                        { roomNo: "208", classroom: "2nd year ECE - C/s" },
+                        { roomNo: "209", classroom: "Toilet" },
+                        { roomNo: "210", classroom: "Faculty" },
+                        { roomNo: "211", classroom: "Electronic Devices Lab" },
+                        { roomNo: "211A", classroom: "Electronic Circuits Lab" },
+                        { roomNo: "212", classroom: "Electrical Measurements Laboratory" },
+                        { roomNo: "212A", classroom: "Electrical Circuits Lab" },
+                        { roomNo: "213", classroom: "Faculty" },
+                        { roomNo: "214", classroom: "Control Systems Lab" },
+                        { roomNo: "214A", classroom: "Power Electronics" },
+                        { roomNo: "215", classroom: "IoT and VLSI Design Laboratory" },
+                        { roomNo: "216", classroom: "4th year - ECE A/s" }
+                    ],
+                    "Second Floor": [
+                        { roomNo: "301", classroom: "Dept Library ECE" },
+                        { roomNo: "302", classroom: "Faculty" },
+                        { roomNo: "303", classroom: "Faculty" },
+                        { roomNo: "304", classroom: "Faculty" },
+                        { roomNo: "305", classroom: "Ladies Waiting Room" },
+                        { roomNo: "306", classroom: "3rd year - ECE A/s" },
+                        { roomNo: "307", classroom: "3rd year - ECE B/s" },
+                        { roomNo: "308", classroom: "3rd year - ECE C/s" },
+                        { roomNo: "309", classroom: "Toilet" },
+                        { roomNo: "310", classroom: "Store" },
+                        { roomNo: "311", classroom: "Simulation Lab" },
+                        { roomNo: "311A", classroom: "Project Lab" },
+                        { roomNo: "312", classroom: "Microwaves & Optical Communication Laboratory" },
+                        { roomNo: "313", classroom: "IC Applications Laboratory" },
+                        { roomNo: "314", classroom: "Faculty" },
+                        { roomNo: "315", classroom: "4th year - ECE C/s" },
+                        { roomNo: "316", classroom: "Communication Systems Lab" },
+                        { roomNo: "317", classroom: "Microprocessors Lab" },
+                        { roomNo: "318", classroom: "Faculty" }
+                    ]
+                },
+                "civil-block": {
+                    "Ground Floor": [
+                        { roomNo: "101", classroom: "1st year - CSE A/s" },
+                        { roomNo: "102", classroom: "1st year - CSE B/s" },
+                        { roomNo: "103", classroom: "H&S Library" },
+                        { roomNo: "104", classroom: "Soil Mechanics Lab-1" },
+                        { roomNo: "104A", classroom: "Soil Mechanics Lab-2" },
+                        { roomNo: "105", classroom: "Toilets" },
+                        { roomNo: "106", classroom: "Transportation Eng Lab" },
+                        { roomNo: "107", classroom: "Faculty" },
+                        { roomNo: "108", classroom: "Faculty" },
+                        { roomNo: "109", classroom: "H&S HoD Room" },
+                        { roomNo: "110", classroom: "Civil Department Library" },
+                        { roomNo: "111", classroom: "4th Year - Civil B/s" },
+                        { roomNo: "112", classroom: "Fluid Mechanics Lab" },
+                        { roomNo: "112A", classroom: "Hydraulic Machines Lab" },
+                        { roomNo: "112B", classroom: "Engineering Mechanics Lab" },
+                        { roomNo: "113", classroom: "Surveying Lab" },
+                        { roomNo: "114", classroom: "Materials Testing Lab" },
+                        { roomNo: "114A", classroom: "Materials Testing Lab" },
+                        { roomNo: "114B", classroom: "Chemistry Lab" },
+                        { roomNo: "114C", classroom: "Laboratory" },
+                        { roomNo: "115", classroom: "Toilet" },
+                        { roomNo: "116", classroom: "Store Room" },
+                        { roomNo: "117", classroom: "Health Center" },
+                        { roomNo: "118", classroom: "Kora Auditorium" },
+                        { roomNo: "119", classroom: "Central Library" }
+                    ],
+                    "First Floor": [
+                        { roomNo: "201", classroom: "Faculty" },
+                        { roomNo: "202", classroom: "HOD Room & Dept. Office" },
+                        { roomNo: "203", classroom: "Ladies Waiting Room" },
+                        { roomNo: "204", classroom: "1st year - CSE C/s" },
+                        { roomNo: "205", classroom: "1st year - CSE D/s" },
+                        { roomNo: "206", classroom: "Toilet" },
+                        { roomNo: "207", classroom: "Environmental Engg Lab" },
+                        { roomNo: "208", classroom: "Faculty" },
+                        { roomNo: "209", classroom: "Faculty" },
+                        { roomNo: "210", classroom: "Geology Lab" },
+                        { roomNo: "211", classroom: "Faculty" },
+                        { roomNo: "212", classroom: "Faculty" },
+                        { roomNo: "213", classroom: "1st Year - Civil" },
+                        { roomNo: "214", classroom: "4th Year - Civil A/s" },
+                        { roomNo: "215", classroom: "2nd year - Civil A/s" },
+                        { roomNo: "216", classroom: "Computers Lab" },
+                        { roomNo: "217", classroom: "3rd year - Civil A/s" },
+                        { roomNo: "218", classroom: "3rd year - Civil B/s" },
+                        { roomNo: "219", classroom: "2nd year - Civil B/s" },
+                        { roomNo: "220", classroom: "Faculty" },
+                        { roomNo: "220A", classroom: "Faculty" },
+                        { roomNo: "221", classroom: "Toilet" },
+                        { roomNo: "222", classroom: "Equipment" }
+                    ],
+                    "Second Floor": [
+                        { roomNo: "301", classroom: "Faculty" },
+                        { roomNo: "302", classroom: "Faculty" },
+                        { roomNo: "303", classroom: "Ladies Waiting Room" },
+                        { roomNo: "304A", classroom: "Physics Lab" },
+                        { roomNo: "304B", classroom: "Physics Lab" },
+                        { roomNo: "305", classroom: "Physics Lab" },
+                        { roomNo: "306", classroom: "1st year - CSE(AIML)" },
+                        { roomNo: "307", classroom: "Toilet" },
+                        { roomNo: "308", classroom: "1st year - CSE(DS)" },
+                        { roomNo: "309", classroom: "Faculty" },
+                        { roomNo: "310", classroom: "1st year - AIML" },
+                        { roomNo: "311", classroom: "Class Room" },
+                        { roomNo: "312", classroom: "1st year - ME" },
+                        { roomNo: "313", classroom: "1st year - EEE" },
+                        { roomNo: "314", classroom: "1st year - ECE A/s" },
+                        { roomNo: "315", classroom: "1st year - ECE B/s" },
+                        { roomNo: "315A", classroom: "Tutorial" },
+                        { roomNo: "316", classroom: "1st year - ECE C/s" },
+                        { roomNo: "317", classroom: "Drawing Hall" },
+                        { roomNo: "318", classroom: "Classroom" }
+                    ]
+                },
+                "library-block": {
+                    "Ground Floor": [
+                        { roomNo: "L-01", classroom: "Main Reading Hall" },
+                        { roomNo: "L-02", classroom: "Circulation Desk" }
+                    ],
+                    "First Floor": [
+                        { roomNo: "L-11", classroom: "Reference Section" },
+                        { roomNo: "L-12", classroom: "Digital Library" },
+                        { roomNo: "L-13", classroom: "Journal Room" }
+                    ],
+                    "Second Floor": [
+                        { roomNo: "L-21", classroom: "Study Rooms" },
+                        { roomNo: "L-22", classroom: "Rare Books Section" }
+                    ]
+                },
+                "pg-block": {
+                    "Ground Floor": [
+                        { roomNo: "101", classroom: "Centre of Excellence (APSSDC-CM Skill Excellence Centre)" },
+                        { roomNo: "102", classroom: "Centre of Excellence (NI Lab VIEW)" },
+                        { roomNo: "112", classroom: "English Language Lab" },
+                        { roomNo: "114", classroom: "Centre of Excellence (APSSDC-Dassault's #D Experience)" },
+                        { roomNo: "116", classroom: "Database Lab" },
+                        { roomNo: "118", classroom: "Big Data Analytics Lab" }
+                    ]
+                }
+            };
+
+            if (building && buildingData[building]) {
+                const floors = ["Ground Floor", "First Floor", "Second Floor", "Third Floor"];
+                floors.forEach(floor => {
+                    const floorData = buildingData[building][floor];
+                    if (floorData) {  // Only display floors that have data
+                        const heading = document.createElement("h3");
+                        heading.textContent = floor;
+                        resultDiv.appendChild(heading);
+
+                        const table = document.createElement("table");
+                        table.innerHTML = `
+                            <thead>
+                                <tr>
+                                    <th>Room No</th>
+                                    <th>Classroom</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        `;
+                        const tableBody = table.querySelector("tbody");
+
+                        floorData.forEach(data => {
+                            const row = document.createElement("tr");
+                            row.innerHTML = `
+                                <td>${data.roomNo}</td>
+                                <td>${data.classroom || "Unspecified"}</td>
+                            `;
+                            tableBody.appendChild(row);
+                        });
+                        resultDiv.appendChild(table);
+                    }
+                });
+            } else {
+                alert("Please select a valid building!");
+            }
+        }
+    </script>
+</body>
+</html>
