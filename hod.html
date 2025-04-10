@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HODs - KSRM Maps</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="nav-container">
+        <header>
+            <a href="index.html" class="logo">KSRM Maps</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="navigation.html"><i class="fas fa-map"></i> Navigation</a></li>
+                    <li><a href="hod.html"><i class="fas fa-user-tie"></i> HOD</a></li>
+                    <li><a href="events.html"><i class="fas fa-calendar"></i> Upcoming Events</a></li>
+                    <li><a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a></li>
+                    <li><a href="courses.html"><i class="fas fa-book"></i> Course Recommendations</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <main>
+        <section class="hods-content fade-in">
+            <h2>Heads of Departments at KSRM</h2>
+            <div class="hods-grid">
+                <div class="hod-card">
+                    <img src="images/h1.jpg" alt="Dr. Ravi Kumar">
+                    <h3>Dr. V. Venkata Ramana</h3>
+                    <p><strong>Department:</strong> CSE & AIML</p>
+                    <button onclick="navigateToDepartment('14.478711,78.765019', 'CSE Department')">Navigate</button>
+                </div>
+                <div class="hod-card">
+                    <img src="images/ece.jpg" alt="Dr. V. Vijaya Kishore">
+                    <h3>Dr. V. Vijaya Kishore</h3>
+                    <p><strong>Department:</strong> Electronics & Communication Engineering (ECE)</p>
+                    <button onclick="navigateToDepartment('14.476840695787327,78.76519355572036', 'ECE Department')">Navigate</button>
+                </div>
+                <div class="hod-card">
+                    <img src="images/me.jpg" alt="Dr. Mohan Rao">
+                    <h3>Dr. D. Ravikanth</h3>
+                    <p><strong>Department:</strong> Mechanical Engineering</p>
+                    <button onclick="navigateToDepartment('14.476935619143577, 78.76632892306003', 'Mechanical Block')">Navigate</button>
+                </div>
+                <div class="hod-card">
+                    <img src="images/civil.jpg">
+                    <h3>Dr. G. Chennakesava Reddy</h3>
+                    <p><strong>Department:</strong> Civil Engineering</p>
+                    <button onclick="navigateToDepartment('14.477237008355349, 78.76511181165445', 'Civil Block')">Navigate</button>
+                </div>
+                <div class="hod-card">
+                    <img src="images/eee.jpeg" alt="Dr. Venkat Rao">
+                    <h3>Dr. M. S. Priyadarshini</h3>
+                    <p><strong>Department:</strong> Electrical & Electronics Engineering (EEE)</p>
+                    <button onclick="navigateToDepartment('14.476840695787327, 78.76519355572036', 'EEE Department')">Navigate</button>
+                </div>
+                <div class="hod-card">
+                    <img src="images/hs.jpeg" alt="Dr. Anjali Sharma">
+                    <h3>Dr. V. Ramachandra Reddy</h3>
+                    <p><strong>Department:</strong> Humanities & Sciences</p>
+                    <button onclick="navigateToDepartment('14.478711, 78.765019', 'AIML Department')">Navigate</button>
+                </div>
+            </div>
+        </section>
+
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function navigateToDepartment(coordinates, departmentName) {
+            const googleMapsURL = `https://www.google.com/maps/search/?api=1&query=${coordinates}`;
+            console.log(`Opening Google Maps URL: ${googleMapsURL}`);
+            window.open(googleMapsURL, "_blank");
+        }
+    </script>
+</body>
+</html>
