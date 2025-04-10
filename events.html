@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Events - KSRM Maps</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="nav-container">
+        <header>
+            <a href="index.html" class="logo">KSRM Maps</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="navigation.html"><i class="fas fa-map"></i> Navigation</a></li>
+                    <li><a href="hod.html"><i class="fas fa-user-tie"></i>HOD</a></li>
+                    <li><a href="events.html"><i class="fas fa-calendar"></i> Upcoming Events</a></li>
+                    <li><a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a></li>
+                    <li><a href="courses.html"><i class="fas fa-book"></i> Course Recommendations</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <main>
+    <section class="upcoming-content fade-in">
+        <h2>Upcoming Events at KSRM</h2>
+        <div class="upcoming-grid">
+            <div class="upcoming">
+                <h3>Course Recommendation Day</h3>
+                <p><strong>Date:</strong> March 25, 2025</p>
+                <p><strong>Location:</strong> Library</p>
+                <p class="upcoming-description">Discover tailored online courses with KSRM Maps’ AI-powered recommendation system. Bring your interests and let us guide you!</p>
+                <button onclick="navigateTo('14.477452020611144, 78.76539787805935')">Navigate to Library</button>
+            </div>
+            <div class="upcoming">
+                <h3>Career Guidance Workshop</h3>
+                <p><strong>Date:</strong> March 20, 2025</p>
+                <p><strong>Location:</strong> Auditorium</p>
+                <p class="upcoming-description">Explore career paths and get expert advice in this interactive session designed for students planning their future.</p>
+                <button onclick="navigateTo('14.477249953208018, 78.7653713257546')">Navigate to Auditorium</button>
+            </div>
+            <div class="upcoming">
+                <h3>Tech Fest 2025</h3>
+                <p><strong>Date:</strong> March 15-16, 2025</p>
+                <p><strong>Location:</strong> Main Block</p>
+                <p class="upcoming-description">Join us for a two-day celebration of innovation with workshops, coding competitions, and project showcases. Don’t miss out!</p>
+                <button onclick="navigateTo('14.478037919994538, 78.76579504777187')">Navigate to Main Block</button>
+            </div>
+            <div class="upcoming">
+                <h3>Basketball Championship Finals</h3>
+                <p><strong>Date:</strong> March 22, 2025</p>
+                <p><strong>Location:</strong> Basketball Court</p>
+                <p class="upcoming-description">Cheer on the top teams as they compete for the title in the annual KSRM Basketball Championship!</p>
+                <button onclick="navigateTo('14.477992617205492, 78.76673171459615')">Navigate to Basketball Court</button>
+            </div>
+            <div class="upcoming">
+                <h3>Mechanical Engineering Symposium</h3>
+                <p><strong>Date:</strong> March 18, 2025</p>
+                <p><strong>Location:</strong> Mechanical Block</p>
+                <p class="upcoming-description">A day of technical talks, demonstrations, and networking for Mechanical Engineering students and faculty.</p>
+                <button onclick="navigateTo('14.476935619143577, 78.76632892306003')">Navigate to Mechanical Block</button>
+            </div>
+            <div class="upcoming">
+                <h3>Cricket Tournament Kickoff</h3>
+                <p><strong>Date:</strong> March 28-30, 2025</p>
+                <p><strong>Location:</strong> KSRM Cricket Ground 1</p>
+                <p class="upcoming-description">Get ready for three days of exciting cricket matches featuring teams from across the college!</p>
+                <button onclick="navigateTo('14.478944522661594, 78.76670573764665')">Navigate to Cricket Ground 1</button>
+            </div>
+            <div class="upcoming">
+                <h3>Civil Engineering Site Visit</h3>
+                <p><strong>Date:</strong> March 21, 2025</p>
+                <p><strong>Location:</strong> Civil Block</p>
+                <p class="upcoming-description">Join a guided tour to explore real-world applications of civil engineering concepts. Limited spots, register now!</p>
+                <button onclick="navigateTo('14.477237008355349, 78.76511181165445')">Navigate to Civil Block</button>
+            </div>
+            <div class="upcoming">
+                <h3>Solar Bike Rally</h3>
+                <p><strong>Date:</strong> March 23, 2025</p>
+                <p><strong>Location:</strong> Solar Bike Parking</p>
+                <p class="upcoming-description">Celebrate sustainability with a rally starting at the Solar Bike Parking area. Bring your eco-friendly spirit!</p>
+                <button onclick="navigateTo('14.47945360444077, 78.76592229043584')">Navigate to Solar Bike Parking</button>
+            </div>
+            <div class="upcoming">
+                <h3>CSE & AIML Hackathon</h3>
+                <p><strong>Date:</strong> March 19-20, 2025</p>
+                <p><strong>Location:</strong> CSE & AIML Block</p>
+                <p class="upcoming-description">A 36-hour coding marathon to solve real-world problems. Form your teams and innovate!</p>
+                <button onclick="navigateTo('14.478711, 78.765019')">Navigate to CSE & AIML Block</button>
+            </div>
+            <div class="upcoming">
+                <h3>Food Festival</h3>
+                <p><strong>Date:</strong> March 17, 2025</p>
+                <p><strong>Location:</strong> Canteen</p>
+                <p class="upcoming-description">Enjoy a variety of cuisines at the annual KSRM Food Festival. Open to all students and staff!</p>
+                <button onclick="navigateTo('14.477451037289244, 78.76455104271645')">Navigate to Canteen</button>
+            </div>
+        </div>
+    </section>
+</main>
+<script>
+    function navigateTo(coordinates) {
+        const googleMapsURL = `https://www.google.com/maps/search/?api=1&query=${coordinates}`;
+        console.log(`Opening Google Maps URL: ${googleMapsURL}`);
+        window.open(googleMapsURL, "_blank");
+    }
+</script>
+
+</body>
+</html>
