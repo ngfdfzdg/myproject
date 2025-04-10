@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - KSRM Maps</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="nav-container">
+        <header>
+            <a href="index.html" class="logo">KSRM Maps</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="navigation.html"><i class="fas fa-map"></i> Navigation</a></li>
+                    <li><a href="hod.html"><i class="fas fa-user-tie"></i>HOD</a></li>
+                    <li><a href="events.html"><i class="fas fa-calendar"></i> Upcoming Events</a></li>
+                    <li><a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a></li>
+                    <li><a href="courses.html"><i class="fas fa-book"></i> Course Recommendations</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <main>
+        <section class="contact-content fade-in">
+            <h2>Contact KSRM College</h2>
+            <div class="contact-container slide-in">
+                <div class="contact-form">
+                    <h3>Get in Touch</h3>
+                    <p>Have questions or need assistance? Send us a message, and we’ll get back to you soon!</p>
+                    <form action="submit_form.php" method="post" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Your Phone (Optional)">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Details</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p><strong>Address:</strong> KSRM College of Engineering, Yerramasupalli, Kadapa, Andhra Pradesh, India - 516003</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <p><strong>Phone:</strong> <a href="tel:+918561256258">+91 8561 256258</a></p>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <p><strong>Email:</strong> <a href="mailto:principal@ksrmce.ac.in">principal@ksrmce.ac.in</a></p>
+                        </li>
+                        <li>
+                            <i class="fas fa-globe"></i>
+                            <p><strong>Website:</strong> <a href="https://ksrmce.ac.in" target="_blank">ksrmce.ac.in</a></p>
+                        </li>
+                    </ul>
+                    <div class="map-link">
+                        <button onclick="navigateToCampus()" class="navigate-btn"><i class="fas fa-route"></i> Navigate to Campus</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <script>
+        function navigateToCampus() {
+            let campusLocation = "14.479497, 78.765683"; // Main Gate coordinates
+            let googleMapsURL = `https://www.google.com/maps/dir/?api=1&destination=${campusLocation}`;
+            window.open(googleMapsURL, "_blank");
+        }
+
+        // Optional: Basic form submission feedback (requires backend handling)
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent default submission for demo
+            alert('Thank you for your message! We’ll get back to you soon.');
+            this.reset(); // Reset form fields
+        });
+    </script>
+</body>
+</html>
