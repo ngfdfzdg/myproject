@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KSRM Maps - College Navigation System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="nav-container">
+        <header>
+            <a href="index.html" class="logo">KSRM Maps</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="navigation.html"><i class="fas fa-map"></i> Navigation</a></li>
+                    <li><a href="hod.html"><i class="fas fa-user-tie"></i> HOD</a></li>
+                    <li><a href="events.html"><i class="fas fa-calendar"></i> Upcoming Events</a></li>
+                    <li><a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a></li>
+                    <li><a href="courses.html"><i class="fas fa-book"></i> Course Recommendations</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="hero-slider">
+                <div class="hero-wrapper">
+                    <div class="hero-slide">
+                        <img src="images/home.jpg">
+                    </div>
+                    <div class="hero-slide">
+                        <img src="images/background.png">
+                    </div>
+                    <div class="hero-slide">
+                        <img src="images/mainblock.jpg">
+                    </div>
+                </div>
+                <button class="slider-arrow prev-arrow">←</button>
+                <button class="slider-arrow next-arrow">→</button>
+                <div class="slider-dots"></div>
+            </div>
+            <div class="hero-content">
+                <h2>An Event Driven Smart Campus Navigator and Course Recommender System</h2>
+                <button onclick="location.href='navigation.html'">Navigate Now</button>
+            </div>
+        </section>       
+ 
+               <!------ Campus, Events and Notice Board HTML Starts ------->
+        <div class="main-section" style="background:#f0f3fa">
+            <div class="container">
+                <!--------------------------------CAMPUS NEWS SECTION ---------------------------->
+                <div class="event">
+                    <h2 class="heading">Campus News</h2>
+                    <div>
+                        <marquee direction="up" scrollamount="7" style="height:340px;">
+                            <ul>
+                                <li>
+                                    <i>10-March-2025 :</i> Companies are offering summer internships for students in various fields. Check the placement cell for details.<img src="images/new.gif">
+                                </li>
+                                <li>
+                                    <i>16-March-2025 :</i>Students staying in hostels must pay their fees before August 1 to avoid penalties.<img src="images/new.gif">
+                                </li>
+                                <li>
+                                    <i>15-March-2025 :</i>The university has introduced a new e-learning platform to enhance digital education. Students can access course materials and lectures anytime.<img src="images/new.gif">
+                                </li>
+                                <li>
+                                    <i>20-March-2025 :</i>The cafeteria will now operate from 8 AM to 10 PM. Special meal discounts are available for students. <img src="images/new.gif">
+                                </li>
+                                                            </ul>
+                        </marquee>
+                    </div>
+                </div>
+                <!----------------------------EVENT SECTION ----------------------->
+                <div class="event">
+                    <h2 class="heading">Events</h2>
+                    <div>
+                        <marquee direction="up" scrollamount="7" style="height:340px;">
+                            <ul>
+                                <li>
+                                    <span class="event-date">18 <br> March </span> Guest Lecture on Cybersecurity-A cybersecurity expert will be delivering a talk on ethical hacking and online safety 
+                                </li>
+                                <li>
+                                    <span class="event-date">29 <br> April </span>Blood Donation Camp – Save Lives!-A voluntary blood donation drive.Participate and make a difference!
+                                </li>
+                                <li>
+                                    <span class="event-date">29 <br> April </span>Sports Meet 2025 – Get Ready for Action!-The annual sports competition with football, basketball, and athletics.                                </li>
+                                <li>
+                                    <span class="event-date">29 <br> April </span> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </li>
+                                <li>
+                                    <span class="event-date">29 <br> April </span> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </li>
+                            </ul>
+                        </marquee>
+                    </div>
+                </div>
+                <!--------------------------------NOTICE BOARD SECTION ------------------------->
+                <div class="event">
+                    <h2 class="heading">Notice Boards</h2>
+                    <div>
+                        <marquee direction="up" scrollamount="7" style="height:340px;">
+                            <ul>
+                                <li>
+                                    Notififcation - M.Tech., I & II sem (R22PG) Supplementary Exams sem Schedule Jan 2025
+                                </li>
+                                <li>
+                                    Notification - M.Tech., III sem (R22PG) Reg. & Supple. Jan 2025                                </li>
+                                <li>
+                                    Notification for R23UG - B.TECH., II SEM SUPPLE., END SEM REGISTRATIONS - DEC 2024-JAN 2025                                </li>
+                                <li>
+                                     Notification for R23UG - B.TECH., I SEM (R23UG) REGULAR END SEM REGISTRATIONS - DEC 2024-JAN 2025
+                                </li>
+                                <li>
+                                    Notification for R23UG - B.TECH., I SEM (R23UG) REG & SUPPLE., END SEM REGISTRATIONS - DEC 2024-JAN 2025                                </li>
+                                <li>
+                                     Notification for R20UG - B.TECH., I, II, IV, VI & VIII SEM SUPPLE., END SEM REGISTRATIONS - DEC 2024-JAN 2025                                </li>
+                            </ul>
+                        </marquee>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+
+        <section class="About-Us"><br>
+            <h2>About Us</h2>
+            <div class="main-section">
+                <div class="container about-container">
+                    <div class="about-img">
+                        <img src="images/nani.jpg" alt="Campus Image">
+                    </div>
+                    <div class="about-detail">
+                        <h1>Hi, Welcome To <span>KSRM </span>College Of Engineering</h1>
+                        <p>The College campus is located 7 K.M. away from Kadapa town on Kadapa to Pulivendula Highway in a calm and salubrious area of 35 acres. The College is set in a serene environment with lush greenery and fresh air. Four multi-storeyed RCC structures measuring 26,700 sqm provide accommodation for the departments. The College has dedicated electric power feeder and 250 KVA substation. Other capital resources include transport vehicles and four hostels. Excellent Bus facilities exist from Kadapa to Hyderabad, Vijayawada, Nellore, Tirupati, Kurnool, Bangalore, Chittoor and Chennai.</p>
+                                                <div class="awards-row">
+                            <div class="about-box">
+                                <img src="images/nba.jpg" alt="Best Trainer">
+                                <h5>Best Trainer</h5>
+                                <p>2022-2023</p>
+                            </div>
+                            <div class="about-box">
+                                <img src="images/acc.jpg" alt="Best Performance">
+                                <h5>Best Performance</h5>
+                                <p>2022-2023</p>
+                            </div>
+                            <div class="about-box">
+                                <img src="images/award-3.png" alt="Top Placement">
+                                <h5>Top Placement</h5>
+                                <p>500+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="popular-places">
+            <h2>Our Gallery</h2>
+            <div class="grid">
+                <img src="images/g1.jpg" alt="Place 1">
+                <img src="images/g2.jpg" alt="Place 2">
+                <img src="images/g3.jpg" alt="Place 3">
+                <img src="images/g4.jpg" alt="Place 4">
+                <img src="images/g5.jpg" alt="Place 5">
+                <img src="images/g6.jpg" alt="Place 6">
+            </div>
+        </section>  
+
+
+        <!-- Our Members Section -->
+        <section class="our-members">
+            <h2>Our Members</h2>
+            <div class="main-section">
+                <div class="container">
+                    <div class="members-grid">
+                        <div class="member">
+                            <img src="images/co.jpg" alt="Managing Director">
+                            <h3>Smt.K. Rajeswari Maam</h3>
+                            <p>Correspondent</p>
+                        </div>
+                        <div class="member">
+                            <img src="images/nani.jpg" alt="Principal">
+                            <h3>Dr.K. Chandra Obul Reddy Garu</h3>
+                            <p>Managing Director</p>
+                        </div>
+                        <div class="member">
+                            <img src="images/ch.jpg" alt="Vice Principal">
+                            <h3>Sri. K. Madan Mohan Reddy Sir</h3>
+                            <p>Vice Chairman</p>
+                        </div>
+                        <div class="member">
+                            <img src="images/p.jpg" alt="Dean of Academics">
+                            <h3>Dr.V.S.Srinivasa Murthy</h3>
+                            <p>Principal</p>
+                        </div>
+                        <div class="member">
+                            <img src="images/p1.jpg" alt="Head of Research">
+                            <h3>Prof. T. Nageswara Prasad</h3>
+                            <p>Vice Principal</p>
+                        </div>
+                                            </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews">
+            <div class="main-section">
+                <div class="container">
+                    <div class="reviews-header">
+                        <span class="label">TESTIMONIALS</span>
+                        <h2>Parent Reviews</h2>
+                    </div>
+                    <div class="reviews-slider">
+                        <button class="slider-arrow prev-arrow">←</button>
+                        <div class="slider-wrapper">
+                            <div class="slider-slide">
+                                <img src="images/re.jpeg" alt="Reviewer 1" class="reviewer-img">
+                                <h3>Mr. Rajesh Kumar</h3>
+                                <p>"The professors are very supportive and encourage students to excel in academics and extracurricular activities. The college also offers good placement opportunities, which help students build their careers."</p>
+                            </div>
+                            <div class="slider-slide">
+                                <img src="images/co.jpg" alt="Reviewer 2" class="reviewer-img">
+                                <h3>Mr. Kumar</h3>
+                                <p>"My child feels at home here. The campus is welcoming, and the staff genuinely cares about the students."</p>
+                            </div>
+                            <div class="slider-slide">
+                                <img src="images/nani.jpg" alt="Reviewer 3" class="reviewer-img">
+                                <h3>Mrs. Sharma</h3>
+                                <p>"The faculty is incredibly supportive and dedicated! My child has thrived academically and socially."</p>
+                            </div>
+                            <div class="slider-slide">
+                                <img src="images/p.jpg" alt="Reviewer 4" class="reviewer-img">
+                                <h3>Mr. Singh</h3>
+                                <p>"KSRM College provides a great learning environment with excellent infrastructure and experienced faculty. My child has gained valuable knowledge and practical skills, and I am happy with the academic progress."</p>
+                            </div>
+                        </div>
+                        <button class="slider-arrow next-arrow">→</button>
+                    </div>
+                    <div class="slider-dots"></div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-main">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span class="logo-icon">📍</span>
+                        <h3>KSRM Maps</h3>
+                    </div>
+                    <p>We provide an intuitive navigation system for KSRM College, helping students, staff, and visitors explore the campus with ease.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Get in Touch</h3>
+                    <p>Address: KSRM College of Engineering, Kadapa, Andhra Pradesh, India</p>
+                    <p>E-mail: <a href="/cdn-cgi/l/email-protection#41">[email&#160;protected]</a></p>
+                    <p>Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Enter your email and receive the latest updates from us. We’ll never share your email address.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email Address" required>
+                        <button type="submit" class="subscribe-btn">➤</button>
+                    </form>
+                </div>
+            </div>
+                    </footer>
+    </main>
+
+    <script>
+        // Hero Slider Script (Inspired by Reviews Slider)
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroWrapper = document.querySelector('.hero-wrapper');
+            const heroSlides = document.querySelectorAll('.hero-slide');
+            const heroPrevArrow = document.querySelector('.hero-slider .prev-arrow');
+            const heroNextArrow = document.querySelector('.hero-slider .next-arrow');
+            const heroDotsContainer = document.querySelector('.hero-slider .slider-dots');
+            let heroCurrentIndex = 0;
+
+            // Create pagination dots for hero slider
+            heroSlides.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('slider-dot');
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToHeroSlide(index));
+                heroDotsContainer.appendChild(dot);
+            });
+
+            const heroDots = document.querySelectorAll('.hero-slider .slider-dot');
+
+            // Function to go to a specific hero slide
+            function goToHeroSlide(index) {
+                if (index < 0) index = heroSlides.length - 1;
+                if (index >= heroSlides.length) index = 0;
+                heroCurrentIndex = index;
+                heroWrapper.style.transform = `translateX(-${heroCurrentIndex * 100}%)`;
+                updateHeroDots();
+            }
+
+            // Update active dot for hero slider
+            function updateHeroDots() {
+                heroDots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === heroCurrentIndex);
+                });
+            }
+
+            // Event listeners for hero arrows
+            heroPrevArrow.addEventListener('click', () => goToHeroSlide(heroCurrentIndex - 1));
+            heroNextArrow.addEventListener('click', () => goToHeroSlide(heroCurrentIndex + 1));
+
+            // Auto-slide every 5 seconds for hero slider
+            setInterval(() => {
+                goToHeroSlide(heroCurrentIndex + 1);
+            }, 5000);
+
+            // Reviews Slider Script (Existing)
+            const sliderWrapper = document.querySelector('.slider-wrapper');
+            const slides = document.querySelectorAll('.slider-slide');
+            const prevArrow = document.querySelector('.reviews-slider .prev-arrow');
+            const nextArrow = document.querySelector('.reviews-slider .next-arrow');
+            const dotsContainer = document.querySelector('.reviews-slider .slider-dots');
+            let currentIndex = 0;
+
+            // Create pagination dots for reviews slider
+            slides.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('slider-dot');
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(index));
+                dotsContainer.appendChild(dot);
+            });
+
+            const dots = document.querySelectorAll('.reviews-slider .slider-dot');
+
+            // Function to go to a specific review slide
+            function goToSlide(index) {
+                if (index < 0) index = slides.length - 1;
+                if (index >= slides.length) index = 0;
+                currentIndex = index;
+                sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+                updateDots();
+            }
+
+            // Update active dot for reviews slider
+            function updateDots() {
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+
+            // Event listeners for review arrows
+            prevArrow.addEventListener('click', () => goToSlide(currentIndex - 1));
+            nextArrow.addEventListener('click', () => goToSlide(currentIndex + 1));
+
+            // Auto-slide every 5 seconds for reviews slider
+            setInterval(() => {
+                goToSlide(currentIndex + 1);
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
