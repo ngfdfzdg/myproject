@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation - College Navigation System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="nav-container">
+        <header>
+            <a href="index.html" class="logo">KSRM Maps</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="navigation.html"><i class="fas fa-map"></i> Navigation</a></li>
+                    <li><a href="hod.html"><i class="fas fa-user-tie"></i>HOD</a></li>
+                    <li><a href="events.html"><i class="fas fa-calendar"></i> Upcoming Events</a></li>
+                    <li><a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a></li>
+                    <li><a href="courses.html"><i class="fas fa-book"></i> Course Recommendations</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+      <main>
+    <section class="notifications-content">
+        <h2>Notifications</h2>
+        <div class="notifications-list">
+            <div class="notification">
+                <h3>Semester Exam Schedule Released</h3>
+                <p><strong>Date:</strong> February 25, 2025</p>
+                <p>The exam timetable for the upcoming semester is now available. Check your department notice board or website for details.</p>
+            </div>
+            <div class="notification">
+                <h3>Library Hours Extended</h3>
+                <p><strong>Date:</strong> February 20, 2025</p>
+                <p>Due to exam season, the library will remain open until 9 PM starting March 1st.</p>
+                <button onclick="navigateToDepartment('14.477452020611144,78.76539787805935', 'Library')">Navigate</button>
+            </div>
+            <div class="notification">
+                <h3>Guest Lecture on AI</h3>
+                <p><strong>Date:</strong> February 15, 2025</p>
+                <p>Join us for a special lecture in the Main Block on March 10th at 10 AM.</p>
+                <button onclick="navigateToDepartment('14.478037919994538,78.76579504777187', 'Main Block')">Navigate</button>
+            </div>
+            <div class="notification">
+                <h3>Basketball Tournament Registration</h3>
+                <p><strong>Date:</strong> March 1, 2025</p>
+                <p>Register now for the inter-department basketball tournament at the Basketball Court. Last date: March 8th.</p>
+                <button onclick="navigateToDepartment('14.477992617205492,78.76673171459615', 'Basket Ball Court')">Navigate</button>
+            </div>
+            <div class="notification">
+                <h3>Mechanical Workshop Safety Training</h3>
+                <p><strong>Date:</strong> March 3, 2025</p>
+                <p>Mandatory safety training for all Mechanical Engineering students at the Mechanical Workshop on March 15th, 9 AM.</p>
+                <button onclick="navigateToDepartment('14.47694122543524,78.76592536088782', 'Mechanical Workshop')">Navigate</button>
+            </div>
+            <div class="notification">
+                <h3>Cricket Ground Maintenance Notice</h3>
+                <p><strong>Date:</strong> March 4, 2025</p>
+                <p>KSRM Cricket Ground 1 will be closed for maintenance from March 10th to March 12th.</p>
+                <button onclick="navigateToDepartment('14.478944522661594,78.76670573764665', 'KSRM Cricket Ground 1')">Navigate</button>
+            </div>
+            <div class="notification">
+                <h3>Canteen Menu Update</h3>
+                <p><strong>Date:</strong> March 5, 2025</p>
+                <p>New healthy food options added to the canteen menu starting March 7th.</p>
+                <button onclick="navigateToDepartment('14.477451037289244,78.76455104271645', 'Canteen')">Navigate</button>
+            </div>
+            <div class="notification">
+                <h3>Solar Bike Parking Inauguration</h3>
+                <p><strong>Date:</strong> March 6, 2025</p>
+                <p>Join us for the opening ceremony of the new Solar Bike Parking area at 11 AM.</p>
+                <button onclick="navigateToDepartment('14.47945360444077,78.76592229043584', 'Solar Bike Parking')">Navigate</button>
+            </div>
+            <div class="notification">
+                <h3>Civil Engineering Project Expo</h3>
+                <p><strong>Date:</strong> March 2, 2025</p>
+                <p>Showcase your projects at the Civil Block on March 20th, 10 AM onwards.</p>
+                <button onclick="navigateToDepartment('14.477237008355349,78.76511181165445', 'Civil Block')">Navigate</button>
+            </div>
+            <div class="notification">
+                <h3>Auditorium Booking Reminder</h3>
+                <p><strong>Date:</strong> March 5, 2025</p>
+                <p>Last chance to book the auditorium for events in March. Contact the admin office.</p>
+                <button onclick="navigateToDepartment('14.477249953208018,78.7653713257546', 'Auditorium')">Navigate</button>
+            </div>
+        </div>
+    </section>
+</main>
+<script>
+        function navigateToDepartment(coordinates, departmentName) {
+            const googleMapsURL = `https://www.google.com/maps/search/?api=1&query=${coordinates}`;
+            console.log(`Opening Google Maps URL: ${googleMapsURL}`);
+            window.open(googleMapsURL, "_blank");
+        }
+    </script>
+</body>
+</html>
